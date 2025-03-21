@@ -1,0 +1,38 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "prueba tecnica luis daniel molina alfaro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "author": "luis daniel molina alfaro",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.6",
+    "sequelize-typescript": "^2.1.6",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.10",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/signale": "^1.4.7",
+    "@types/validator": "^13.12.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  }
+}
