@@ -75,8 +75,8 @@ const NuevoDomicilio = () => {
     };
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         const token = localStorage.getItem("token");
-
         try {
             const response = await fetch("http://localhost:3005/domicilio/create", {
                 method: "POST",
