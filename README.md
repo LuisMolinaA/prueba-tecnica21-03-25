@@ -12,8 +12,8 @@ Para ejecutar el aplicativo siga los siguientes pasos
 > [!IMPORTANT]
 notas: en automatico al ejecutar el backend(si no se colocaron mal as credenciales de acceso) creara la base de datos, tablas asi como ejecutar un seeder
 
-Correo administrador de prueba(se inicializa con la base de datos)
-admin@example.com
-securepassword
+Correo y password de administrador para prueba(se inicializa con la base de datos)
+1. admin@example.com
+2. securepassword
 
 [documentacion de postman](https://documenter.getpostman.com/view/19410109/2sAYkGLKMY), indispensable generar un token jwt ejecutando la consulta de logn para hacer uso de las rutas
