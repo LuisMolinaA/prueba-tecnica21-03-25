@@ -44,6 +44,15 @@ export async function initializeDatabase() {
   await createDatabaseIfNotExists();
   try {
     await sequelize.authenticate();
+
+    signale.success("Conexión establecida correctamente.");
+    await sequelize.sync({ force: false });
+
+    const count = await Estado.count();
+    if (count === 0) {
+      await seedEstadosMunicipios(sequelize);
+    }
+
     const adminEmail = "admin@example.com";
     const adminPassword = "securepassword";
 
@@ -58,14 +67,6 @@ export async function initializeDatabase() {
       signale.success(`Usuario administrador creado con éxito: ${adminEmail}`);
     } else {
       signale.info(`El usuario administrador ya existe: ${adminEmail}`);
-    }
-
-    signale.success("Conexión establecida correctamente.");
-    await sequelize.sync({ force: false });
-
-    const count = await Estado.count();
-    if (count === 0) {
-      await seedEstadosMunicipios(sequelize);
     }
   } catch (err) {
     signale.error("No se pudo conectar a la base de datos:", err);
