@@ -7,7 +7,7 @@ import { Estado } from "../models/estados";
 import { Municipio } from "../models/municipios";
 import { User } from "../models/user";
 import { seedEstadosMunicipios } from "./seeder/estadosMunicipiosSeeder";
-
+import bcrypt from "bcryptjs";
 const DB_NAME = process.env.DB_NAME!;
 const DB_USER = process.env.DB_USER!;
 const DB_PASSWORD = process.env.DB_PASSWORD!;
@@ -44,6 +44,22 @@ export async function initializeDatabase() {
   await createDatabaseIfNotExists();
   try {
     await sequelize.authenticate();
+    const adminEmail = "admin@example.com";
+    const adminPassword = "securepassword";
+
+    const adminExists = await User.findOne({ where: { email: adminEmail } });
+    if (!adminExists) {
+      const hashedPassword = await bcrypt.hash(adminPassword, 10);
+      await User.create({
+        email: adminEmail,
+        password: hashedPassword,
+        permisos: true,
+      });
+      signale.success(`Usuario administrador creado con éxito: ${adminEmail}`);
+    } else {
+      signale.info(`El usuario administrador ya existe: ${adminEmail}`);
+    }
+
     signale.success("Conexión establecida correctamente.");
     await sequelize.sync({ force: false });
 
