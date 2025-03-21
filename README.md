@@ -1,9 +1,9 @@
 # prueba-tecnica21-03-25
 ´´´
 Para ejecutar el aplicativo siga los siguientes pasos
-1.- abra la terminal de comandos
-2.- en la terminal dirigace a la ubicacion del servicio que desee ejecutar primero ejemplo "D:\dev\prueba tecnica\front"
-3.- una vez en la ruta ejecute el comando 
+1. abra la terminal de comandos
+2. en la terminal dirigace a la ubicacion del servicio que desee ejecutar primero ejemplo "D:\dev\prueba tecnica\front"
+3. una vez en la ruta ejecute el comando 
   npm run dev
 4.- repita el paso 1, 2 y 3 solo dirigiendose a la siguiente carpeta
 5.- abra su navegador y dirijase a la siguiente url http://localhost:5173/
