@@ -1,7 +1,7 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "proxy": "http://localhost:3005",
+  "proxy": "http://localhost:5173",
   "description": "prueba tecnica luis daniel molina alfaro",
   "main": "index.js",
   "scripts": {
